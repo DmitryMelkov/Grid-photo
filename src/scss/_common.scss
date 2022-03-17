@@ -117,21 +117,12 @@ a {
   background-color: $colorHashtag;
 }
 
-.just-validate-error-label {
-  // position: absolute;
-  // top: 0;
-  // left: 23px;
-  font-size: 12px;
-}
-
 @media (max-width: 1300px) {
   .container {
     padding-left: 35px;
     padding-right: 35px;
   }
 }
-
-
 
 @media (max-width: 1024px) {
   .container {
@@ -146,7 +137,6 @@ a {
     padding-right: 27px;
   }
 }
-
 
 @media (max-width: 650px) {
   .container {
