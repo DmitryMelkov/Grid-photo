@@ -1,0 +1,151 @@
+@import "_variables";
+@import "_mixins";
+
+.about-us {
+  background-color: $colorDark;
+  &-container {
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 70px;
+  }
+  &__left {
+    width: 50%;
+    margin-right: 30px;
+  }
+  &__title {
+    margin-bottom: 5px;
+    color: $colorWhite;
+  }
+  &__desc {
+    color: $colorWhite;
+    font-family: "Roboto", sans-serif;
+    line-height: 28px;
+  }
+  &__right {
+    width: 50%;
+    margin-top: 25px;
+  }
+  &__right-title {
+    margin-top: 25px;
+    margin-bottom: 16px;
+    color: $colorWhite;
+    line-height: 22px;
+    font-weight: 400;
+  }
+  &__right-form {
+    display: flex;
+  }
+  &__right-label {
+    margin-right: 30px;
+    position: relative;
+  }
+  &__right-label .just-validate-error-label {
+    position: absolute;
+    top: 0;
+    left: 23px;
+    font-size: 12px;
+  }
+  &__right-input {
+    padding-left: 15px;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    background-color: $colorHeader;
+    border: 0;
+    color: $colorWhite;
+  }
+  &__right-input::placeholder {
+    padding-left: 10px;
+    font-size: 16px;
+    color: $colorWhite;
+  }
+
+  &__right-btn {
+    @include btn;
+    max-width: 126px;
+  }
+}
+
+//hover
+@media (min-width: 1024px) {
+  .about-us {
+    &__right-btn:hover {
+      @include btn-hover;
+    }
+  }
+}
+
+//active, focus
+.about-us {
+  &__right-btn:active {
+    @include btn-active;
+  }
+  &__right-btn:focus-visible {
+    @include btn-focus;
+  }
+}
+
+@media (max-width: 1024px) {
+  .about-us {
+    &__right-form {
+      flex-direction: column;
+    }
+    &__right-input {
+      width: 78%;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .about-us {
+    &-container {
+      flex-direction: column;
+    }
+    &__left {
+      width: 100%;
+    }
+    &__right {
+      display: flex;
+      width: 100%;
+    }
+    &__right-img {
+      width: 100%;
+      max-width: 278px;
+    }
+    &__content {
+      margin-left: 30px;
+    }
+    &__right-input {
+      margin-right: 0;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .about-us {
+    &__title {
+      font-size: 18px;
+      line-height: 22px;
+    }
+    &__desc {
+      font-size: 14px;
+      line-height: 25px;
+    }
+    &__right {
+      flex-direction: column;
+    }
+    &__right picture {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &__content {
+      margin-left: 0;
+    }
+    &__right-btn {
+      font-size: 14px;
+    }
+  }
+}

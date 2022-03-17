@@ -1,0 +1,29 @@
+@import "_variables";
+
+@mixin pasteImg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@mixin btn {
+  padding: 15px 22px;
+  background-color: $colorOrange;
+  color: $colorWhite;
+  border: 1px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+@mixin btn-hover {
+  background-color: $colorOrangeFocus;
+}
+
+@mixin btn-active {
+  background-color: $colorOrangeActive;
+  border: 1px solid $colorOrangeActive;
+}
+
+@mixin btn-focus {
+  background-color: $colorOrange;
+  border: 1px solid $colorOrangeActive;
+}

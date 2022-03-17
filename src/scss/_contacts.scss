@@ -1,0 +1,199 @@
+@import "_variables";
+@import "_mixins";
+
+.contacts {
+  padding-bottom: 68px;
+  &__content {
+    display: flex;
+  }
+  &__title {
+    margin-bottom: 22px;
+  }
+  &__left {
+    position: relative;
+
+    width: 100%;
+    margin-right: 30px;
+  }
+  &__left-btn {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    z-index: 11;
+    color: $colorHeader;
+    transition: all 0.3s ease-in-out;
+  }
+  &__left-svg {
+    width: 20px;
+    height: 20px;
+  }
+  &__left-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding-top: 175px;
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 53%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(32, 32, 32, 0.85);
+  }
+  &__left-title {
+    line-height: 22px;
+    font-weight: 400;
+    color: $colorWhite;
+  }
+  &__left-desc {
+    line-height: 28px;
+    color: $colorIcons;
+  }
+  &__left-phone {
+    color: $colorWhite;
+    color: $colorOrange;
+  }
+  &__left-map {
+    height: 460px;
+    width: 100%;
+  }
+  &__right-title {
+    margin-bottom: 5px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+  &__right-desc {
+    margin-bottom: 14px;
+    font-family: "Roboto" serif;
+    line-height: 22px;
+    color: $colorLightDark;
+  }
+  &__right-form {
+    display: flex;
+    flex-direction: column;
+  }
+  &__right-label {
+    position: relative;
+  }
+  &__right-label .just-validate-error-label {
+    position: absolute;
+    top: 0;
+    left: 23px;
+    font-size: 12px;
+  }
+  &__right-input {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    padding-left: 23px;
+    background-color: #e9e9e9;
+    border: 0;
+  }
+  &__right-textarea {
+    resize: none;
+    width: 100%;
+    height: 150px;
+    margin-bottom: 20px;
+    padding-top: 15px;
+    padding-left: 23px;
+    background-color: #e9e9e9;
+    border: 0;
+  }
+  &__right-btn {
+    @include btn;
+  }
+}
+
+[class*="ground-pane"] {
+  filter: grayscale(1);
+}
+
+//hover
+@media (min-width: 1024px) {
+  .contacts {
+    &__left-btn:hover {
+      color: $colorOrange;
+    }
+    &__right-btn:hover {
+      @include btn-hover;
+    }
+    &__left-phone:hover {
+      color: $colorOrangeActive;
+    }
+  }
+}
+
+//active, focus
+.contacts {
+  &__right-btn:active {
+    @include btn-active;
+  }
+  &__right-btn:focus-visible {
+    @include btn-focus;
+  }
+  &__left-btn:active {
+    color: $colorOrangeActive;
+  }
+  &__left-btn:focus-visible {
+    color: $colorOrangeFocus;
+    outline: none;
+  }
+  &__left-phone:focus-visible {
+    color: $colorOrangeFocus;
+    outline: none;
+  }
+}
+
+@media (max-width: 1300px) {
+  .contacts {
+    &__left {
+      max-width: 590px;
+    }
+    &__left-content {
+      padding-top: 25px;
+      padding-bottom: 21px;
+      padding-left: 30px;
+      width: 100%;
+      height: 31%;
+      bottom: 0;
+    }
+    &__left-btn {
+      top: 10%;
+      right: 3%;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .contacts {
+    &__content {
+      flex-direction: column;
+    }
+    &__left {
+      margin-right: 0;
+      width: 100%;
+      max-width: 1023px;
+    }
+    &__right {
+      margin-top: 24px;
+      max-width: 466px;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .contacts {
+    &__left-map {
+      height: 472px;
+    }
+    &__left-title {
+      font-size: 18px;
+    }
+    &__left-desc {
+      font-size: 14px;
+      line-height: 18px;
+    }
+    &__left-phone {
+      font-size: 14px;
+    }
+  }
+}

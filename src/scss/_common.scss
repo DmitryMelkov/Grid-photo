@@ -1,0 +1,156 @@
+@import "_variables";
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "TTFirsNeue", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  list-style-type: none;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-shadow: none;
+  font-size: 16px;
+  line-height: 18.75px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  color: var(--color-text-grey);
+  background-color: var(--color-white);
+  outline: none;
+}
+
+label {
+  display: block;
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 37.44px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 30.96px;
+  font-weight: 700;
+}
+
+p,
+span,
+a {
+  font-size: 16px;
+}
+
+.title-reset {
+  margin: 0;
+}
+
+.descr-reset {
+  margin: 0;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.btn-reset {
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0px;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1290px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.hashtag {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 7px 15px;
+  color: $colorWhite;
+  background-color: $colorHashtag;
+}
+
+.just-validate-error-label {
+  // position: absolute;
+  // top: 0;
+  // left: 23px;
+  font-size: 12px;
+}
+
+@media (max-width: 1300px) {
+  .container {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+
+
+
+@media (max-width: 1024px) {
+  .container {
+    padding-left: 31px;
+    padding-right: 31px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 27px;
+    padding-right: 27px;
+  }
+}
+
+
+@media (max-width: 650px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
