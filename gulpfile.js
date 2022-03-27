@@ -155,7 +155,6 @@ const watchFiles = () => {
   });
   watch("./src/scss/**/*.scss", styles);
   watch("./src/*.html", htmlInclude);
-  // watch("./src/**/*.html", htmlMinify);
   watch("./src/img/**.jpg", imgToApp);
   watch("./src/img/**.png", imgToApp);
   watch("./src/img/**.jpeg", imgToApp);

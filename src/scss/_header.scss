@@ -12,26 +12,30 @@
 }
 
 .header {
+  min-width: 320px;
   background-color: $colorDark;
   &-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 20px;
-    padding-bottom: 23px;
+    padding-top: 22px;
+    padding-bottom: 24px;
   }
 
   &__nav-list {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     color: $colorWhite;
   }
   &__nav-item:not(:last-child) {
     margin-right: 74px;
   }
+  &__nav-item:first-child {
+    display: none;
+  }
   &__nav-link {
-    padding: 5px;
+    // padding: 5px;
     transition: all 0.3s ease-in-out;
   }
   &__menu-burger {
@@ -95,6 +99,11 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    max-width: 131px;
+    margin: 0 auto;
+  }
+  &__list-link {
+    display: flex;
   }
   &__list-link-svg {
     width: 30px;
@@ -189,7 +198,9 @@
     position: relative;
     &__open {
       display: block;
+      padding-top: 5px;
     }
+
     &__btn {
       padding-bottom: 5px;
       position: absolute;
@@ -255,16 +266,24 @@
       padding-left: 27px;
       padding-right: 27px;
     }
+
     &__nav-menu {
       width: 100%;
-      padding: 12px 27px;
+      min-width: 320px;
+      padding-top: 11px;
+      padding-bottom: 11px;
+      padding-left: 27px;
+      padding-right: 27px;
       position: absolute;
-      top: 72px;
+      top: 80px;
       left: 0;
       background-color: $colorHeader;
     }
     &__nav-item:not(:last-child) {
       margin-right: 15px;
+    }
+    &__nav-list {
+      justify-content: space-between;
     }
   }
 }
@@ -290,7 +309,10 @@
     }
     &__nav-list.open {
       display: block;
-      overflow-y: scroll;
+      overflow: scroll;
+    }
+    &__nav-item:first-child {
+      display: block;
     }
     &__nav-item {
       padding-top: 20px;
@@ -315,6 +337,37 @@
     }
     &__btn-input {
       width: 200px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .logo {
+    &__img {
+      width: 17px;
+      height: 17px;
+      margin-right: 6px;
+    }
+    &__img-inscription {
+      margin-top: 0;
+      width: 86px;
+      height: 16px;
+    }
+  }
+  .header {
+    &-container {
+      padding-left: 21px;
+      padding-right: 21px;
+    }
+    &__nav-menu {
+      top: 73px;
+      padding: 11px 22px;
+    }
+  }
+  .search {
+    &__open-svg {
+      width: 20px;
+      height: 20px;
     }
   }
 }

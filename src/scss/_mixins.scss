@@ -9,6 +9,7 @@
 @mixin btn {
   padding: 15px 22px;
   background-color: $colorOrange;
+  font-weight: 700;
   color: $colorWhite;
   border: 1px solid transparent;
   transition: all 0.3s ease-in-out;

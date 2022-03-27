@@ -60,6 +60,8 @@
     z-index: 1;
   }
   &__content-desc-small {
+    margin-top: 11px;
+    margin-bottom: 10px;
     width: 100%;
     line-height: 22px;
   }
@@ -80,6 +82,7 @@
     color: $colorLightDark;
   }
   &__content-svg-big {
+    margin-bottom: 5px;
     width: 14px;
     height: 14px;
     color: $colorLightDark;
@@ -96,12 +99,17 @@
     color: $colorWhite;
   }
   &__content-desc-big {
+    margin-top: 8px;
     max-width: 298px;
     line-height: 22px;
     color: $colorWhite;
   }
+  &__content-btn-container {
+    display: block;
+    margin-bottom: 15px;
+  }
   &__content-btn-big {
-    padding: 16px 22px;
+    padding: 15px 19px;
     font-size: 16px;
     line-height: 18px;
     font-weight: 700;
@@ -110,8 +118,11 @@
     color: $colorWhite;
     border: 3px solid $colorOrange;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
   }
 }
+
+
 
 //hover
 @media (min-width: 1024px) {
@@ -119,7 +130,6 @@
     &__content-btn-big:hover {
       @include btn-hover;
     }
-    
   }
 }
 
@@ -134,8 +144,10 @@
   }
 }
 
+
 @media (max-width: 1024px) {
   .our-projects {
+    padding-bottom: 76px;
     &__content {
       grid-template-columns: repeat(8, 1fr);
     }
@@ -143,8 +155,17 @@
       grid-column: span 2;
       min-height: 218px;
     }
+    &__content-desc-small {
+      -webkit-line-clamp: 2; /* Число отображаемых строк */
+      display: -webkit-box; /* Включаем флексбоксы */
+      -webkit-box-orient: vertical; /* Вертикальная ориентация */
+      overflow: hidden; /* Обрезаем всё за пределами блока */
+    }
     &__content-item--big {
       grid-column: span 5;
+    }
+    &__content-date-big {
+      margin-top: 10px;
     }
     &__item-3 {
       grid-column: span 4;
@@ -157,6 +178,7 @@
 
 @media (max-width: 768px) {
   .our-projects {
+    padding-bottom: 66px;
     &__content {
       grid-template-columns: repeat(6, 1fr);
     }
@@ -172,17 +194,24 @@
     &__content-link-big {
       max-width: 714px;
     }
-
+    &__content-desc-small {
+      -webkit-line-clamp: 3;
+    }
+    &__content-date-big {
+      margin-top: 0;
+    }
   }
 }
 
 @media (max-width: 575px) {
   .our-projects {
+    padding-top: 50px;
     &__content {
       grid-template-columns: repeat(2, 1fr);
     }
     &__content-item--small {
-      grid-column: span 1;
+      grid-column: span 2;
+      max-width: 278px;
     }
     &__content-item--big {
       grid-column: span 2;
@@ -190,23 +219,24 @@
     &__content-item--medium {
       grid-column: span 1;
     }
-    &__item-3 {
-      grid-column: span 1;
-    }
     &__content-link-big {
       max-width: 714px;
     }
-
   }
 }
 
 @media (max-width: 375px) {
   .our-projects {
+    padding-bottom: 59px;
+    &__title {
+      margin-bottom: 15px;
+    }
     &__content {
       grid-template-columns: repeat(2, 1fr);
+      grid-gap: 25px;
     }
-    &__content-img-small, &__content-img-medium {
-      display: block;
+    &__content-item {
+      max-width: 278px;
       margin: 0 auto;
     }
     &__content-item--small {
@@ -214,12 +244,13 @@
     }
     &__content-item--big {
       grid-column: span 2;
+      height: 422px;
+    }
+    &__content-link-big {
+      padding-top: 197px;
     }
     &__content-item--medium {
       grid-column: span 2;
     }
-
-
-
   }
 }

@@ -1,8 +1,12 @@
 import JustValidate from "just-validate";
 
 export function validateEmail() {
-  const validateEmail = new JustValidate(".about-us-validate");
-  const validateContacts = new JustValidate(".form-validate");
+  const validateEmail = new JustValidate(".about-us-validate", {
+    errorFieldCssClass: "is-invalid",
+  });
+  const validateContacts = new JustValidate(".form-validate", {
+    errorFieldCssClass: "is-invalid",
+  });
 
   validateEmail.addField(".about-us__email", [
     {

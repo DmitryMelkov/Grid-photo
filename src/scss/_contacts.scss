@@ -7,12 +7,11 @@
     display: flex;
   }
   &__title {
-    margin-bottom: 22px;
+    margin-bottom: 16px;
   }
   &__left {
     position: relative;
-
-    width: 100%;
+    width: 66%;
     margin-right: 30px;
   }
   &__left-btn {
@@ -31,10 +30,10 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    padding-top: 175px;
-    padding-left: 50px;
-    padding-right: 50px;
-    width: 53%;
+    padding-top: 181px;
+    padding-left: 58px;
+    padding-right: 44px;
+    width: 48%;
     height: 100%;
     z-index: 1;
     background-color: rgba(32, 32, 32, 0.85);
@@ -45,16 +44,26 @@
     color: $colorWhite;
   }
   &__left-desc {
+    margin-top: 6px;
     line-height: 28px;
     color: $colorIcons;
   }
   &__left-phone {
     color: $colorWhite;
-    color: $colorOrange;
+    display: flex;
+
+    align-items: center;
+  }
+  &__left-phone-svg {
+    width: 22px;
+    height: 22px;
   }
   &__left-map {
     height: 460px;
     width: 100%;
+  }
+  &__right {
+    width: 30%;
   }
   &__right-title {
     margin-bottom: 5px;
@@ -86,17 +95,19 @@
     margin-bottom: 20px;
     padding-left: 23px;
     background-color: #e9e9e9;
-    border: 0;
+    border: 1px solid transparent;
+    outline: none;
   }
   &__right-textarea {
     resize: none;
     width: 100%;
     height: 150px;
-    margin-bottom: 20px;
+    margin-bottom: 14px;
     padding-top: 15px;
     padding-left: 23px;
     background-color: #e9e9e9;
-    border: 0;
+    border: 1px solid transparent;
+    outline: none;
   }
   &__right-btn {
     @include btn;
@@ -117,7 +128,7 @@
       @include btn-hover;
     }
     &__left-phone:hover {
-      color: $colorOrangeActive;
+      color: $colorOrange;
     }
   }
 }
@@ -137,9 +148,21 @@
     color: $colorOrangeFocus;
     outline: none;
   }
+  &__left-phone:active {
+    color: $colorOrangeFocus;
+  }
   &__left-phone:focus-visible {
     color: $colorOrangeFocus;
     outline: none;
+  }
+  &__right-input:focus-visible {
+    border: 1px solid $colorOrange;
+  }
+  &__right-textarea:focus-visible {
+    border: 1px solid $colorOrange;
+  }
+  .is-invalid {
+    border: 1px solid red;
   }
 }
 
@@ -152,13 +175,17 @@
       padding-top: 25px;
       padding-bottom: 21px;
       padding-left: 30px;
+      padding-right: 50px;
       width: 100%;
-      height: 31%;
+      height: 33%;
       bottom: 0;
     }
     &__left-btn {
       top: 10%;
       right: 3%;
+    }
+    &__right {
+      width: 34%;
     }
   }
 }
@@ -174,14 +201,29 @@
       max-width: 1023px;
     }
     &__right {
-      margin-top: 24px;
-      max-width: 466px;
+      margin-top: 28px;
+      width: 65%;
     }
   }
 }
 
 @media (max-width: 575px) {
   .contacts {
+    padding-bottom: 46px;
+    &__right {
+      margin-top: 19px;
+      width: 100%;
+    }
+    &__right-input {
+      height: 40px;
+    }
+    &__right-btn {
+      font-size: 14px;
+      line-height: 16px;
+    }
+    &__right-desc {
+      line-height: 18px;
+    }
     &__left-map {
       height: 472px;
     }
